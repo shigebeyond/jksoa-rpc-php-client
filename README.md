@@ -16,6 +16,14 @@ $service = Referer::getRefer('net.jkcode.jksoa.rpc.example.ISimpleService');
 echo $service->echo('shi');
 ```
 
+## implement
+
+For `jsonr` rpc protocol, php client implement just convert method invocation into http request, same as the follow http request command:
+
+```
+curl -d '{"args":["shi"],"clazz":"net.jkcode.jksoa.rpc.example.ISimpleService","id":105333247373737984,"methodSignature":"echo","version":1}' http://192.168.61.237:9080
+```
+
 ## todo
 
 1. support zookeeper subscriber to learn about the changing providers.
